@@ -129,8 +129,8 @@ def main():
         y_pred_train, y_pred_test = best_tanimoto_gp(sm_train, y_train, test)
 
         # Record train metrics
-        print(f"y_pred_train MAE: {np.mean(np.abs(y_pred_train - y_train)):.3g}")
-        print(f"GP mean MAE: {np.mean(np.abs(y_train)):.3g}")
+        logger.info(f"y_pred_train MAE: {np.mean(np.abs(y_pred_train - y_train)):.3g}")
+        logger.info(f"GP mean MAE: {np.mean(np.abs(y_train)):.3g}")
 
         # Undo test transformations
         y_pred_test = (y_pred_test + gp_mean).copy()
