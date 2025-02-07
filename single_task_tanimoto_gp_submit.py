@@ -68,9 +68,9 @@ def best_tanimoto_gp(smiles_train, y_train, smiles_test) -> tuple[np.ndarray, np
             return params, opt_state, loss
 
         # Run optimization loop
-        for opt_idx in range(10_000):  # probably too many steps, but that's ok!
+        for opt_idx in range(2_000):  # probably too many steps, but that's ok!
             gp_params, opt_state, loss = step(gp_params, opt_state)
-            if opt_idx % 500 == 0:
+            if opt_idx % 250 == 0:
                 logger.debug(f"Step {opt_idx}, {loss=:>15}, {gp_params=}")
 
         # Make final predictions
