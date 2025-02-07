@@ -1,29 +1,13 @@
-# Python Template
+# ASAP antiviral challenge with GP models
 
-**Project description here**
+Using Gaussian process models on molecular fingerprint features.
 
-This is a template project so I don't need to keep setting up pre-commit.
+Currently the code uses:
+
+- My [`kern_gp`](https://github.com/AustinT/kernel-only-GP) library `v0.1.0`
+- My [`tanimoto_gp`](https://github.com/AustinT/tanimoto-gp/) library `v0.1.1`
+
 
 ## Development
 
-### Installation
-
-**Installation instructions here**
-
-### Formatting
-
-Use pre-commit to enforce formatting, large file checks, etc.
-
-If not already installed in your environment, run:
-
-```bash
-conda install pre-commit
-```
-
-To install the precommit hooks:
-
-```bash
-pre-commit install
-```
-
-Now a series of useful checks will be run before any commit.
+When using this repo, pleaes install + run `pre-commit`!!
